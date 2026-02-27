@@ -1,0 +1,217 @@
+/* Color Palette */
+:root {
+    --cream: #FEF9F3;
+    --baby-pink: #FFD1DC;
+    --deep-pink: #F4C2C2;
+    --text-gray: #5d5d5d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text-gray);
+    line-height: 1.9;
+}
+
+.promo-banner {
+    background-color: var(--baby-pink);
+    color: var(--text-gray);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--deep-pink);
+}
+
+.header {
+    background-image: linear-gradient(rgba(236, 144, 144, 0.2), rgba(255, 255, 255, 0.2)), 
+                      url('glod2glow.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
+    padding: 30px 60px;
+    align-items: center;
+    background: var(--cream);
+    width: 100%;
+}
+
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: var(--text-gray);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-links a {
+    text-decoration: none; 
+    color: var(--text-gray);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--deep-pink);
+    border-bottom: 2px solid var(--baby-pink); 
+    padding-bottom: 5px;
+}
+
+.hero-content {
+    margin: auto;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5.1rem;
+    margin-bottom: 10px;
+    color: var(--text-darkgray);
+}
+
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--baby-pink);
+    color: var(--text-gray);
+    padding: 12px 35px;
+    /* Cleaned up decoration for a more modern look */
+    text-decoration: none; 
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 1.1s;
+    box-shadow: 0 4px 6px rgba(99, 96, 96, 0.05);
+    border: 3px solid var(--deep-pink);
+}
+
+.cta-button:hover {
+    background-color: var(--deep-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Products Section */
+.products-section, .testimonials {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.grid, .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Updated Card Design */
+.card, .testimonial-card {
+    background: #FFFDD0; /* White cards pop better on cream background */
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--baby-pink);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(243, 188, 188, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--deep-pink);
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+/* Updated Add to Cart Button */
+.add-btn {
+    background: var(--baby-pink);
+    border: 3px solid var(--deep-pink);
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: 1.1s;
+}
+
+.add-btn:hover {
+    background: var(--deep-pink);
+    color: rgb(220, 184, 184);
+}
+
+/* Testimonials Styling */
+.testimonials {
+    background-color: #fff; 
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-card span {
+    color: #FFD700; 
+    font-size: 1.2rem;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--baby-pink);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header { height: 60vh; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .nav-container { 
+        flex-direction: column; 
+        padding: 15px;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
